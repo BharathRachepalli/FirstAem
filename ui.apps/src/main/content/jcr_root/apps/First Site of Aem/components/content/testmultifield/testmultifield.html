@@ -1,0 +1,24 @@
+<h1> testing multi field </h1>
+
+<div data-sly-use.testMultiField="fsa.core.models.TestMultiField"><br>
+
+<h1>Name : ${testMultiField.authName}</h1>
+
+<h2>${testMultiField.authName} Books</h2>
+
+<h3>AgeOfAuth : ${testMultiField.authAge}</h3>
+
+<br>
+
+<h1>Multi fied with single field</h1>
+
+<div data-sly-list.item="${testMultiField.authBooks}">
+
+Book : ${itemList.count}
+
+<p> Book : <b>${item}</b></p>
+</div>
+
+<p> All Book : <b>${testMultiField.authBooks @ join=', '}</b></p>
+
+</div>

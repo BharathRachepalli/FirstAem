@@ -1,0 +1,12 @@
+<h1> Hello Sling </h1>
+
+<div data-sly-use.testSlingComp="${'fsa.core.models.TestSlingComp' @ rAttribute='TestAttribute'}"></div>
+
+<div>First Name: ${testSlingComp.firstName}</div>
+<div>Last Name: ${testSlingComp.lastName}</div>
+
+<div>Is Professor: ${testSlingComp.isProfessor}</div>
+<div>Page Title: ${testSlingComp.pageTitle}</div>
+
+<div>RequestAttribute: ${testSlingComp.requestAttribute}</div>
+<div>LastModifiedBy: ${testSlingComp.LastModifiedBy}</div>
