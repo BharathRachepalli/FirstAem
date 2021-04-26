@@ -31,6 +31,30 @@
                         text="he is Professor?"
                         uncheckedValue="{Boolean}true"
                         value="{Boolean}false"/>
+                    <subject/>
+                    <radiobutton
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                        fieldLabel="selectRadio"
+                        name="./radio">
+                        <items jcr:primaryType="nt:unstructured">
+                            <op1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radio"
+                                text="abc"
+                                value="abc"/>
+                            <op2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radio"
+                                text="xyz"
+                                value="xyz"/>
+                            <op3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/radio"
+                                text="pqr"
+                                value="pqr"/>
+                        </items>
+                    </radiobutton>
                 </items>
             </column>
         </items>

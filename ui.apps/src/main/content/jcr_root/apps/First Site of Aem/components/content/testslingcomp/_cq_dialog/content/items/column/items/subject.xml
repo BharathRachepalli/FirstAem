@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Widget"
+    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+    fieldLabel="selectSubject"
+    name="./subject"
+    type="select"
+    xtype="selection">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <v1
+            jcr:primaryType="cq:Widget"
+            text="aem"
+            value="aem"/>
+        <v2
+            jcr:primaryType="cq:Widget"
+            text="sling"
+            value="sling"/>
+        <v3
+            jcr:primaryType="cq:Widget"
+            text="htl"
+            value="htl"/>
+    </items>
+</jcr:root>
