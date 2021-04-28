@@ -13,7 +13,7 @@
 <h1>Multi fied with single field</h1>
 
 <div data-sly-list.item="${testMultiField.authBooks}">
-
+-------someThing!!!!!!!!!!!!!!!!!!!!!!!----------
 Book : ${itemList.count}
 
 <p> Book : <b>${item}</b></p>
@@ -21,4 +21,15 @@ Book : ${itemList.count}
 
 <p> All Book : <b>${testMultiField.authBooks @ join=', '}</b></p>
 
+
+=====bookdetails===============
+<div data-sly-list.item="${testMultiField.bookDetails}">
+-------someThing----------
+<p> BookName : <b>${item.bookname}</b></p>
+<p> BookPrice : <b>${item.bookprice}</b></p>
+
 </div>
+
+
+</div>
+
