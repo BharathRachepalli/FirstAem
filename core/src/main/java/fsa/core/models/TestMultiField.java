@@ -71,4 +71,9 @@ public class TestMultiField {
 			return Collections.emptyList();
 		}
 	}
+	
+	@PostConstruct
+	public void init() {
+		LOG.info("Inside PostConstruct");
+	}
 }

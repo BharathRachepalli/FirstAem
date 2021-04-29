@@ -1,0 +1,37 @@
+<h1>CodingChallange</h1>
+
+<template data-sly-template.first>
+       testing template
+</template>
+
+<div data-sly-call="${first}"></div>
+
+<div data-sly-test="${properties.jcr:title != 'title'}">not title</div>
+
+<div data-sly-text="${properties.jcr:title}">hello</div>
+
+<div data-sly-include="/apps/First Site of Aem/components/content/Headrer/Headrer.html"></div>
+
+<div data-sly-use.testchallenge="fsa.core.models.CodingChallenge"></div>
+
+<div>Is Boolean: ${testchallenge.testboolean}</div>
+
+<div>Selection : ${properties.selectdemo}</div>
+
+<div data-sly-list.item="${testchallenge.mfdemo}">
+<p>List Items : <b>${item}</b></p>
+
+<h1>multiple</h1>
+
+<div data-sly-list.item="${testchallenge.multipledemo}">
+-
+<p> firsttype : <b>${item.firsttype}</b></p>
+<p> secondtype : <b>${item.secondtype}</b></p>
+
+</div>
+
+<img src="${testchallenge.fileReference}" alt="alternateName" />
+
+PathName : <a href="${testchallenge.findpath}">path</a>
+
+</div>
