@@ -16,7 +16,6 @@ import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 
-
 @Component (service = TestOSGiConfigFactory.class,configurationPolicy = ConfigurationPolicy.REQUIRE)
 @Designate (ocd = TestOSGiConfigFactory.ServiceConfigFactory.class, factory = true)
 public class TestOSGiConfigFactory {

@@ -1,0 +1,8 @@
+<h1>OSGi Config Factory Demo</h1>
+<div data-sly-use.testosgiconfigfactory="fsa.core.models.TestOsgiConfigFactory"></div>
+
+<div data-sly-list="${testosgiconfigfactory.allOSGiConfigs}">
+--------------Config # <b>${itemList.count}</b>----------------
+<p> Name : <b>${item.serviceName}</b></p>
+<p> URL : <b>${item.serviceURL}</b></p>
+</div>
