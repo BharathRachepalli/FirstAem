@@ -1,0 +1,24 @@
+.cmp-tsc--container {
+	font-family: cursive;
+	background-color: pink;
+}
+
+.testaligncenter {
+	text-align: center;
+}
+
+.testalignleft {
+	text-align: left;
+}
+
+.testalignright {
+	text-align: right;
+}
+
+.testcoloraqua {
+	color: aqua;
+}
+
+.testcolorred {
+	color: red;
+}
