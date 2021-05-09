@@ -1,5 +1,9 @@
 package fsa.core.services;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,6 +20,8 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.day.cq.dam.api.Asset;
+import com.day.cq.dam.api.Rendition;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
@@ -95,5 +101,47 @@ public class PageResourceServiceImpl implements PageResourceService{
 		}
 		
 		return pageInfo;
+	}
+
+
+	@Override
+	public List<String> getCsvData() {
+		
+		List<String> data = new ArrayList<String>();
+		
+		ResourceResolver resourceResolver = getResourceResolver();
+		
+		Resource resource = resourceResolver.getResource("/content/dam/fsa/Sample100.csv");
+		
+//		Asset asset = resource.adaptTo(Asset.class);
+//        Rendition rendition = asset.getOriginal();
+//        InputStream inputStream = rendition.adaptTo(InputStream.class);
+//        if (inputStream != null) {
+//            String csvFile = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+//            return csvFile;
+//        } else {
+//            return "Error in getCsvData()";
+//        }
+		
+		Asset asset = resource.adaptTo(Asset.class);
+		
+		Rendition rendition = asset.getOriginal();
+		
+		InputStream inputStream = rendition.adaptTo(InputStream.class);
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+		
+		try {
+			while(br.ready()) {
+				data.add(br.readLine());
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		return data;
 	}
 }

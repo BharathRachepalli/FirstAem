@@ -4,7 +4,15 @@
 
 <div><p>Title : <b>${resourceRes.pageTitle}</b></p></div>
 
+
+<br><h2>getPageAndNode()</h2><br>
 <div data-sly-list="${resourceRes.pageAndNode}">
 <p>Title : ${item}</p>
 </div>
+
+<br><h2>getCsvData()</h2><br>
+<div data-sly-list="${resourceRes.csvData}">
+<p>Entry : ${item}</p>
+</div>
+
 </div>

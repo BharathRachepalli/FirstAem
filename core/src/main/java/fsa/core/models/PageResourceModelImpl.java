@@ -31,4 +31,10 @@ public class PageResourceModelImpl implements PageResourceModel{
 		return pageResourceService.getPageAndNode();
 	}
 
+	@Override
+	public List<String> getCsvData() {
+		
+		return pageResourceService.getCsvData();
+	}
+
 }
