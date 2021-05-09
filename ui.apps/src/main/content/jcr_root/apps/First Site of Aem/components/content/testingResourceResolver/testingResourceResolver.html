@@ -3,4 +3,8 @@
 <div data-sly-use.resourceRes="fsa.core.models.PageResourceModel">
 
 <div><p>Title : <b>${resourceRes.pageTitle}</b></p></div>
+
+<div data-sly-list="${resourceRes.pageAndNode}">
+<p>Title : ${item}</p>
+</div>
 </div>

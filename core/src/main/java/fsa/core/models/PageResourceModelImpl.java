@@ -1,5 +1,7 @@
 package fsa.core.models;
 
+import java.util.List;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -21,6 +23,12 @@ public class PageResourceModelImpl implements PageResourceModel{
 	public String getPageTitle() {
 		
 		return pageResourceService.getPageTitle();
+	}
+
+	@Override
+	public List<String> getPageAndNode() {
+		
+		return pageResourceService.getPageAndNode();
 	}
 
 }
