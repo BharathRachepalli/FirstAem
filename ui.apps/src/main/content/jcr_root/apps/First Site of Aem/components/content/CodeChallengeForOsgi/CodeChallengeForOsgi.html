@@ -1,0 +1,14 @@
+<h1>OSGi Config Demo</h1>
+<div data-sly-use.testosgiconfig="fsa.core.models.CodeChallengeForOsgi"></div>
+
+<div><p>Service Name : <b>${testosgiconfig.serviceName}</b></p></div>
+
+<div><p>Live Data : <b>${testosgiconfig.liveData}</b></p></div>
+
+<div><p>Run Mode : <b>${testosgiconfig.getSubjects}</b></p></div>
+<div><b>Countries</b></div>
+<ul data-sly-list="${testosgiconfig.countries}">
+<li>${item}</li>
+</ul>
+
+

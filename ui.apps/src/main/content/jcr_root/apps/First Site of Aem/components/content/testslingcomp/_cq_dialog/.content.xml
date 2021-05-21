@@ -31,7 +31,6 @@
                         text="he is Professor?"
                         uncheckedValue="{Boolean}true"
                         value="{Boolean}false"/>
-                    <subject/>
                     <radiobutton
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
@@ -55,6 +54,7 @@
                                 value="pqr"/>
                         </items>
                     </radiobutton>
+                    <subject/>
                 </items>
             </column>
         </items>
