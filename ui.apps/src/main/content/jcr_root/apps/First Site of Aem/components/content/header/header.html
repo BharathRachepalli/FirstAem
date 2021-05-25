@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<div data-sly-use.resourceRes="fsa.core.models.PageResourceReviewModel"></div>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=${resourceRes.pageDesc}>
+<title>${resourceRes.pageTitle}</title>
+<meta name="og:title" property="og:title"
+	content=${resourceRes.pageDesc}>
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="http://localhost:4503/content/we-retail/us/en/testingseo.html" />
+</head>
+
+<body>
+	<h1>Testing Resolver</h1>
+
+
+
+	<div>
+		<p>
+			Title : <b>${resourceRes.pageTitle}</b>
+		</p>
+	</div>
+
+
+	<div>
+		<p>
+			Description : <b>${resourceRes.pageDesc}</b>
+		</p>
+	</div>
+</body>
+</html>
+

@@ -41,7 +41,7 @@ public class TestingExcecutionofWorkFlow extends SlingSafeMethodsServlet{
 			if(StringUtils.isNotBlank(payload)) {
 				
 				WorkflowSession workflowSession = resourceResolver.adaptTo(WorkflowSession.class);
-				WorkflowModel workflowModel = workflowSession.getModel("/var/workflow/models/Testingpageversion");
+				WorkflowModel workflowModel = workflowSession.getModel("/var/workflow/models/testingworkflow");
 				WorkflowData workflowData = workflowSession.newWorkflowData("JCR_PATH", payload);
 				
 //				workflowSession.startWorkflow(workflowModel, workflowData);
