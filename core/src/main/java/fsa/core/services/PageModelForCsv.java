@@ -6,20 +6,34 @@ public class PageModelForCsv {
     private String parentPage;
     private String pageName;
     private String whichTemplate;
-    private String pageTitle;
+    public String getPageDescp() {
+		return pageDescp;
+	}
+
+	public void setPageDescp(String pageDescp) {
+		this.pageDescp = pageDescp;
+	}
+
+	private String pageTitle;
+    private String pageDescp;
 
     public PageModelForCsv() {
         super();
     }
 
-    public PageModelForCsv(String parentPage, String pageName, String whichTemplate, String pageTitle) {
-        this.parentPage = parentPage;
-        this.pageName = pageName;
-        this.whichTemplate = whichTemplate;
-        this.pageTitle = pageTitle;
-    }
+   
 
-    public String getParentPage() {
+    public PageModelForCsv(String parentPage, String pageName, String whichTemplate, String pageTitle,
+			String pageDescp) {
+		super();
+		this.parentPage = parentPage;
+		this.pageName = pageName;
+		this.whichTemplate = whichTemplate;
+		this.pageTitle = pageTitle;
+		this.pageDescp = pageDescp;
+	}
+
+	public String getParentPage() {
         return parentPage;
     }
 

@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.jcr.Node;
+import javax.jcr.Session;
+
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
@@ -79,6 +82,7 @@ public class CreatePageUsingCSVImpl implements CreatePageUsingCSV{
                 pageModel.setPageName(arr[1].trim());
                 pageModel.setWhichTemplate(arr[2].trim());
                 pageModel.setPageTitle(arr[3].trim());
+                pageModel.setPageDescp(arr[4].trim());
                 return pageModel;
             }).collect(Collectors.toList());
             
@@ -113,6 +117,14 @@ public class CreatePageUsingCSVImpl implements CreatePageUsingCSV{
                 // Page page = pageManager.create(PARENT_PATH, PAGE_NAME, WHICH_TEMPLATE,
                 // PAGE_TITLE);
 
+                //to add discription to page
+                String fileDestination = "/content/fsa/en/"+pageModel.getPageName()+"/jcr:content";
+    			Resource pageResource = resourceResolver.getResource(fileDestination);
+    			Node myNode = pageResource.adaptTo(Node.class);
+    			myNode.setProperty("jcr:description",pageModel.getPageDescp());
+    			Session session = resourceResolver.adaptTo(Session.class);
+    			session.save();
+                
                 if (page != null) {
                     pagesCreated.add(page);
                 }
