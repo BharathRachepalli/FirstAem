@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 public class CodingChallenge {
 
 	
-	private static final Logger LOG = LoggerFactory.getLogger(TestMultiField.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CodingChallenge.class);
 	
 	@Self
 	SlingHttpServletRequest componentResource;
